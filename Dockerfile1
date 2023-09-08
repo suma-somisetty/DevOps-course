@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM nginx:latest
 EXPOSE 8081
-RUN mkdir /app
-ADD . app/web-app.jar web-app.jar"]
+COPY ./html /usr/share/nginx/html
+CMD["nginx", "-g", "daemon off;"]
