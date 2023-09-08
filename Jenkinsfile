@@ -8,7 +8,7 @@ pipeline{
     dockerImage = docker.build('sumasomisetty1/nginx1:latest')
   }
     stage('push to dockerhub'){
-     withDockerRegistry([ credentialsId: "dockerhubaccount", url: "https://hub.docker.com/repository/docker/sumasomisetty1/web-app/general" ]) {
+     withDockerRegistry([ credentialsId: "dockerhubaccount", url: "https://hub.docker.com/repository/docker/sumasomisetty1/web-app/general" ])
         dockerImage.push()
      
     }
