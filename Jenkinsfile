@@ -9,10 +9,6 @@ pipeline{
         sh 'mvn clean install'
     }
   }
-  stage("build docker image"){
-    script{
-      sh 'docker build -t web-app .'
-    }
-  }
+
 }
     
