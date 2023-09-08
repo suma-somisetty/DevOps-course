@@ -1,6 +1,6 @@
 node{
     stage('clone repo'){
-      git credentialsId: 'suma-somisetty', url: 'https://github.com/suma-somisetty/DevOps-course.git'
+      git credentialsId: 'git', url: 'https://github.com/suma-somisetty/DevOps-course.git'
     }
   stage('build image') {
     dockerImage = docker.build('sumasomisetty1/nginx1:latest')
