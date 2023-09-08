@@ -1,6 +1,4 @@
-pipeline{
-  agent any
-  stages{
+node{
     stage('clone repo'){
       git credentialsId: 'git', url: 'https://github.com/suma-somisetty/DevOps-course.git'
     }
@@ -12,7 +10,6 @@ pipeline{
         dockerImage.push()
      
     }
-  }
 }
         
 
